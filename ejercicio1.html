@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let numeroDeElementos = [56, 34, 2, 12, 4, 57, 0];
+
+        const listOrder = (list) => {
+            let aux;
+            for (let i = 0; i < list.length; i++) {
+                for (let j = 0; j < list.length; j++) {
+                    if (list[j - 1] > list[j]) {
+                        aux = list[j]
+                        list[j] = list[j - 1]
+                        list[j - 1]=aux
+                    }
+                }
+            }
+            return list
+        }
+        console.log(listOrder(list))
+    </script>
+</body>
+</html>
+
+
