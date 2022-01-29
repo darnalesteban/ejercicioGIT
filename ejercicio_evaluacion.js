@@ -88,5 +88,5 @@ pedro.nuevoPost();
 
 //La clase BD tiene un array de usuarios
 // Crera metodos para agregar y quitar usuarios de la base de datos
-// Crear metodo para listar los usuarios
+// Crear metodo para listar losblob:https://web.whatsapp.com/11e277d8-c2fd-441b-a2d5-3d922567d4ad usuarios
 // Crear metodo para obetner informacion de la base de datos
