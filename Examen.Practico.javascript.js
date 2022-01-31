@@ -62,7 +62,7 @@ class persona {
     nombre;
     edad;
     obtDetalles() {
-        console.log(persona);
+        console.log(this);
     }
     constructor(nombre, edad) {
         this.nombre = nombre;
@@ -74,34 +74,62 @@ class estudiante extends persona {
         super(nombre, edad, calificacion);
         this.calificacion = calificacion;
     }
+    obtDetalles(){
+        console.log(this);
+    }
 }
-const estudiante1 = new estudiante("pepe", "24", "9.8");
-console.log(estudiante1);
-
 class profesor extends persona {
     constructor(nombre, edad, asignatura = "js", nivel = "Basico") {
         super(nombre, edad, asignatura, nivel);
         this.asignatura = asignatura;
         this.nivel = nivel;
     }
-}
-const materia1 = new profesor("pepe", "24");
-console.log(materia1);
-
-class grupo extends profesor {
-    constructor(nombre, edad, promedio, estudiantes) {
-        super(nombre, edad, promedio, estudiantes)
-        this.promedio = promedio;
-        this.estudiantes = estudiantes;
+    obtDetalles(){
+        console.log(this);
     }
 }
-const colegio = new grupo();
-console.log(colegio);
+class grupo  {
+    promedio;
+    constructor(profesor, estudiantes = []) {
+        //super(nombre, edad, promedio, estudiantes)
+        this.profesor = profesor;
+        this.estudiantes = estudiantes;
+    }
+    calificar (){
+        for(let i = 0 ;i < this.estudiantes.length; i++){
+            this.estudiantes[i].calificacion = Math.random() * 10
+        }
+        //console.log(this.estudiantes);
+    }
+    calcularPromedio(){
+        let suma = 0;
+        for(let i = 0 ;i < this.estudiantes.length; i++){
+            suma =  this.estudiantes[i].calificacion + suma
+        }
+        this.promedio = suma / this.estudiantes.length
+        //console.log(this.promedio);
+    }
+    obtDetalles(){
+        console.log(this);
+    }
+}
+const estudiante1 = new estudiante("alejandro", 20, 3);
+const estudiante2 = new estudiante("santiago", 19, 4);
+const estudiante3 = new estudiante("yulian", 22, 5);
+const estudiante4 = new estudiante("dina", 25, 3);
+const estudiante5 = new estudiante("yeni", 22, 4);
+const estudiante6 = new estudiante("bruno", 19, 5);
+const estudiante7 = new estudiante("sammy", 18, 2);
 
 
+let arrayEstudiantes = [estudiante1 , estudiante2 , estudiante3, estudiante4, estudiante5, estudiante6, estudiante7];
 
+const profesor1 = new profesor("pepe", "24");
 
-
+const grupo1 = new grupo(profesor1, arrayEstudiantes);
+grupo1.calificar();
+grupo1.calcularPromedio();
+grupo1.obtDetalles();
 
 //Bonus: Escribe una function que genere todas las posibles combinaciones con las letras de
 // dicho string. (La entrada la puede limitar a 3 letras) (15 puntos)
