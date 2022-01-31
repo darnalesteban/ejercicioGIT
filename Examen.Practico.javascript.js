@@ -21,7 +21,7 @@ if(numero1+ 1 < numero2) {
 // Utilizando la estructura crear un script que calcule la factorial de un número entero.
 // (10 pts)
 function factorial(n) {
-    if (n == 0) {
+    if (n === 0) {
         return 1;
     } else {
         return factorial(n - 1) * n;
@@ -56,6 +56,47 @@ function Palindromo(cadena){
 }
 console.log(Palindromo("amanapanama"));
 
+// ejercicio #5
+
+class persona {
+    nombre;
+    edad;
+    obtDetalles() {
+        console.log(persona);
+    }
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+}
+class estudiante extends persona {
+    constructor(nombre, edad, calificacion) {
+        super(nombre, edad, calificacion);
+        this.calificacion = calificacion;
+    }
+}
+const estudiante1 = new estudiante("pepe", "24", "9.8");
+console.log(estudiante1);
+
+class profesor extends persona {
+    constructor(nombre, edad, asignatura = "js", nivel = "Basico") {
+        super(nombre, edad, asignatura, nivel);
+        this.asignatura = asignatura;
+        this.nivel = nivel;
+    }
+}
+const materia1 = new profesor("pepe", "24");
+console.log(materia1);
+
+class grupo extends profesor {
+    constructor(nombre, edad, promedio, estudiantes) {
+        super(nombre, edad, promedio, estudiantes)
+        this.promedio = promedio;
+        this.estudiantes = estudiantes;
+    }
+}
+const colegio = new grupo();
+console.log(colegio);
 
 
 
@@ -65,13 +106,13 @@ console.log(Palindromo("amanapanama"));
 //Bonus: Escribe una function que genere todas las posibles combinaciones con las letras de
 // dicho string. (La entrada la puede limitar a 3 letras) (15 puntos)
 
-let Combinacion = (pais) =>{
+let Combinacion = (expresion) =>{
     let combinacion = [];
-    for(let i = 0 ;i < pais.length; i++)
+    for(let i = 0 ;i < expresion.length; i++)
     {
-        for(let j = i + 1; j < pais.length + 1; j++)
+        for(let j = i + 1; j < expresion.length + 1; j++)
         {
-            combinacion.push(pais.slice(i , j));
+            combinacion.push(expresion.slice(i , j));
         }
     }
     return combinacion;
