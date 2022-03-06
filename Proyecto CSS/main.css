@@ -9,7 +9,14 @@ html{
     padding-top: 50px
 }
 h1, h2 {
-    font-size: 30px;
+    font-size: 42px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: center;
+}
+h4{
+    font-size: 22px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -41,21 +48,99 @@ button:hover{
     text-align: center;
 }
 #tarjeta{
-    padding: 10px;
-    max-height: 280px;
-    background-size: cover;
-    width: 90%;
+    max-width: 692px;
+    background: white;
+    border: 1px solid grey;
+    display: grid;
+    grid-template-columns: 33% 67%;
     margin: auto;
 }
-#tarjeta>img{
+.lado_izq{
     width: 170px;
     height: 180px;
     display: inline-block;
     position: relative;
-    top: 40px;
-    left: 89px;
+    top: -121px;
+    left: -84px;
 }
-/*#productos {
+#seccion1{
+    background: url("img/Grupo 9213.webp");
+    height: border-box;
+    background-size: contain;
+}
+.tercera_parte{
+    background-image: url("img/Enmascarar grupo 259.webp");
+    margin-top: 80px;
+    background-position: top center;
+    padding-top: 90px;
+    padding-bottom: 100px;
+    max-width: 2560px;
+}
+
+
+.tarjetas_de_plataforma{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    max-width: 800px;
+    margin: auto;
+    padding: 22px;
+    grid-column-gap: 23px;
+    grid-row-gap: 23px;
+    border: none;
+    font-size: 16px;
+}
+.tarjetaCaracteristica{
+    display: grid;
+    border: 1px solid #b4b4b9;
+    border-radius: 10px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    width: auto;
+}
+.tarje_dentro{
+    display: inline;
+    margin: 16px;
+    height: 16px;
+}
+.tarje_dentro_parrafo{
+    display: inline;
+    margin: 0;
+}
+#tarjetas{
+    display: grid;
+    justify-content: space-evenly;
+    padding-top: 200px;
+}
+.productos{
+    display: grid;
+    justify-content: space-evenly;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.tarjetasola{
+    box-shadow: 0 10px 30px rgb(195 213 224 / 50%);
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+/*.tarjetasola_1{
+    width: 229px;
+    height: 215px;
+}*/
+.negritas{
+    font-weight: bolder;
+}
+footer{
+    background-color: #1489ff;
+}
+.footer_1{
+    display: inline;
+}
+
+/*.productos {
     padding-top: 18px;
     height: 280px;
     max-width: 700px;
@@ -67,6 +152,21 @@ button:hover{
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
     grid-template-rows: 50px 30px;
+}*/
+/*#tarjeta>img/AndreaV-web.png{
+    width: 170px;
+    height: 180px;
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    left: 89px;
+}*/
+
+/*#tarjeta{
+    padding: 10px;
+    max-height: 280px;
+    background-size: cover;
+    width: 90%;
 }*/
 /*#tarjetas >img{*/
 /*    width: 237px;*/
@@ -101,9 +201,7 @@ button:hover{
 /*    margin: auto;*/
 /*    gap: 20px;*/
 /*}*/
-/*.negritas{*/
-/*    font-weight: bolder;*/
-/*}*/
+
 /*#ultimoBoton{*/
 /*    margin-top: 50px;*/
 /*}*/
